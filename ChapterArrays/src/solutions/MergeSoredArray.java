@@ -12,41 +12,41 @@ package solutions;
 public class MergeSoredArray {
 
 	public static void main(String[] args) {
-		//input
-		int[] nums1 = {1,2,3,0,0,0};
-		int[] nums2 = {2,5,6};
+		// input
+		int[] nums1 = { 1, 2, 3, 0, 0, 0 };
+		int[] nums2 = { 2, 5, 6 };
 		int m = 3;
 		int n = 3;
 		MergeSoredArray sol = new MergeSoredArray();
-				
-		//method call
+
+		// method call
 		sol.merge(nums1, m, nums2, n);
-		for(int num:nums1) {
-			System.out.print(num+" ");
+		for (int num : nums1) {
+			System.out.print(num + " ");
 		}
-		
+
 	}
-	
+
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
-        //nums2 loop
-        for(int i=0; i<n; i++){
-            //nums1 loop
-            for(int j=0; j<nums1.length; j++){
-                //compare elements
-                if(nums2[i]<=nums1[j]){
-                    //shift nums1 to right from j position
-                    for(int k=nums1.length-1; k>j; k--){
-                        nums1[k] = nums1[k-1];
-                    }
-                    //place the element on right place
-                    nums1[j]=nums2[i];
-                    break;
-                } else if(j==i+m){
-                    nums1[j]=nums2[i];
-                    break;
-                }
-            }
-        }
-    }
+		// nums2 loop
+		for (int i = 0; i < n; i++) {
+			// nums1 loop
+			for (int j = 0; j < nums1.length; j++) {
+				// compare elements
+				if (nums2[i] <= nums1[j]) {
+					// shift nums1 to right from j position
+					for (int k = nums1.length - 1; k > j; k--) {
+						nums1[k] = nums1[k - 1];
+					}
+					// place the element on right place
+					nums1[j] = nums2[i];
+					break;
+				} else if (j == i + m) {
+					nums1[j] = nums2[i];
+					break;
+				}
+			}
+		}
+	}
 
 }

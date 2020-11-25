@@ -12,32 +12,32 @@ package solutions;
 public class RemoveElement {
 
 	public static void main(String[] args) {
-		//input
-		int[] nums1 = {0,1,2,2,3,0,4,2};
+		// input
+		int[] nums1 = { 0, 1, 2, 2, 3, 0, 4, 2 };
 		int val = 2;
 		RemoveElement sol = new RemoveElement();
-				
-		//method call
+
+		// method call
 		sol.removeElement(nums1, val);
-		for(int num:nums1) {
-			System.out.print(num+" ");
+		for (int num : nums1) {
+			System.out.print(num + " ");
 		}
 
 	}
-	
+
 	public int removeElement(int[] nums, int val) {
-        int len = nums.length;
-        for(int i=0; i<len; i++){
-            if(val==nums[i]){
-                //shift elements
-                for(int j=i+1; j<nums.length; j++){
-                    nums[j-1] = nums[j];
-                }
-                len--;	//reduce the length by one
-                i--;	//shift the pointer to left after shifting the elements to the left
-            }
-        }
-        return len;
-    }
+		int len = nums.length;
+		for (int i = 0; i < len; i++) {
+			if (val == nums[i]) {
+				// shift elements
+				for (int j = i + 1; j < nums.length; j++) {
+					nums[j - 1] = nums[j];
+				}
+				len--; // reduce the length by one
+				i--; // shift the pointer to left after shifting the elements to the left
+			}
+		}
+		return len;
+	}
 
 }
