@@ -1,3 +1,11 @@
+/*
+ * Problem: Given a fixed length array arr of integers, duplicate each occurrence of zero, 
+ * 			shifting the remaining elements to the right.
+ * 
+ * Link: https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
+ * 
+ */
+
 package solutions;
 
 public class DuplicateZeros {

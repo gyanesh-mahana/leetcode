@@ -1,3 +1,11 @@
+/*
+ * Problem: Given an array of integers A sorted in non-decreasing order, 
+ * 			return an array of the squares of each number, also in sorted non-decreasing order.
+ * 
+ * Link: https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3240/
+ * 
+ */
+
 package solutions;
 
 public class SortedSquares {
