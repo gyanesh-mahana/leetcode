@@ -6,7 +6,7 @@
  * 
  */
 
-package solutions;
+package basics;
 
 public class SortedSquares {
 

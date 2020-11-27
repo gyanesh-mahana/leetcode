@@ -8,7 +8,7 @@
  * 
  */
 
-package solutions;
+package deletion;
 
 public class RemoveDuplicateSortedArray {
 

@@ -6,7 +6,7 @@
  * 
  */
 
-package solutions;
+package insertion;
 
 public class DuplicateZeros {
 
