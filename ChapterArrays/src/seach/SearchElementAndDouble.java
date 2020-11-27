@@ -13,7 +13,7 @@ public class SearchElementAndDouble {
 
 	public static void main(String[] args) {
 		// input
-		int[] nums = { 1, 3,5,7};
+		int[] nums = { 1, 3, 5, 7 };
 
 		SearchElementAndDouble sol = new SearchElementAndDouble();
 
@@ -49,10 +49,9 @@ public class SearchElementAndDouble {
 
 		for (int i = 0; i < arr.length; i++) {
 			ht.put(arr[i], arr[i]);
-			if(ht.get(arr[i]*2)!=null) {
+			if (ht.get(arr[i] * 2) != null) {
 				return true;
-			}
-			else if(arr[i]%2==0 && ht.get(arr[i]/2)!=null) {
+			} else if (arr[i] % 2 == 0 && ht.get(arr[i] / 2) != null) {
 				return true;
 			}
 //			if(ht.containsKey(arr[i]*2)) {
