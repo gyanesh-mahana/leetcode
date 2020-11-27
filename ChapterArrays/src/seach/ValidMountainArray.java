@@ -11,12 +11,12 @@ public class ValidMountainArray {
 
 	public static void main(String[] args) {
 		// input
-		int[] nums = { 1, 2, 3, 5, 3, 1 };
+		int[] nums = { 2, 3, 12, 5, 3 };
 
 		ValidMountainArray sol = new ValidMountainArray();
 
 		// method call
-		boolean isExist = sol.validMountainArrayAlternateApproach(nums);
+		boolean isExist = sol.validMountainArrayApproach2(nums);
 
 		if (isExist) {
 			System.out.println("Valid Mountain Array");
@@ -53,7 +53,7 @@ public class ValidMountainArray {
 		return (i == len - 1 && up && down);
 	}
 
-	public boolean validMountainArrayAlternateApproach(int[] arr) {
+	public boolean validMountainArrayApproach1(int[] arr) {
 
 		int len = arr.length;
 		int peakIndex = 0;
@@ -87,4 +87,38 @@ public class ValidMountainArray {
 		}
 		return true;
 	}
+
+	public boolean validMountainArrayApproach2(int[] arr) {
+
+		int i = 0;
+		int j = arr.length - 1;
+
+		// no maountain with a single element
+		if (i == j) {
+			return false;
+		}
+
+		// ascend the mountain
+		while (i + 1 < j && arr[i] < arr[i + 1]) {
+			// check the boundary condition
+			if (i == j) {
+				return false;
+			}
+			i++; // value reaches peak
+		}
+
+		// descend the mountain
+		while (j > 0 && arr[j] < arr[j - 1]) {
+			// check the boundary condition
+			if (j == 1) {
+				return false;
+			}
+			j--; // value reaches the peak
+		}
+
+		// if we reach the same peak while ascending and descending the mountain
+		// then its the valid mountain
+		return i == j;
+	}
+
 }
