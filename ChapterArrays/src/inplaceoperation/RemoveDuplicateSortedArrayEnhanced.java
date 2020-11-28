@@ -1,6 +1,12 @@
-package inplaceoperation;
+/*
+ * Problem: Given a sorted array nums, remove the duplicates in-place such that each element appears
+ * 			only once and returns the new length. Do not allocate extra space for another array, you 
+ * 			must do this by modifying the input array in-place with O(1) extra memory.
+ * 
+ * Link: https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3258/
+ */
 
-import deletion.RemoveDuplicateSortedArray;
+package inplaceoperation;
 
 public class RemoveDuplicateSortedArrayEnhanced {
 
@@ -27,14 +33,14 @@ public class RemoveDuplicateSortedArrayEnhanced {
 //        int tempIndex = 0;
 
 // ****************************************************
-		//count # of unique elements
+		// count # of unique elements
 //        for(int i=0; i<len; i++){
 //            if(i==0 || nums[i]!=nums[i-1]){
 //                countUnique++;
 //            }    
 //        }
 // ****************************************************
-        //First improvement
+		// First improvement
 //        for(int j=0; j<len; j++){
 //            if(j==0 || nums[j]!=nums[j-1]){
 //                nums[tempIndex++]=nums[j];	//assigning the unique elements to the original array
