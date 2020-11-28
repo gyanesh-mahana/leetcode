@@ -7,36 +7,45 @@
 
 package inplaceoperation;
 
-public class MoveZerostoLast {
+public class MoveZerosToLast {
 
 	public static void main(String[] args) {
 		// input
-		int[] nums = { 1, 2, 3, 3, 3, 3, 4, 5, 5, 5, 6 };
+		int[] nums = { 1, 0, 3, 12, 3, 0, 0, 25, 5, 0, 2 };
 
-		MoveZerostoLast sol = new MoveZerostoLast();
+		MoveZerosToLast sol = new MoveZerosToLast();
 
 		// method call
-		sol.moveZeroes(nums);
+		sol.moveZeroesBigO1(nums);
 		for (int i : nums) {
 			System.out.print(" " + i);
 		}
 	}
 
-	public void moveZeroes(int[] nums) {
+	public int[] moveZeroesBigON(int[] nums) {
 		int len = nums.length;
 		int index = 0;
 
 		// with space complexity O(N)
-//         int[] result = new int[len];
+		int[] result = new int[len];
 
-//         for(int i=0; i<len; i++){
-//             if(nums[i]!=0){
-//                 result[index++]=nums[i];
-//             }
-//         }
-//         for(;index<len;index++){
-//             result[index]=0;
-//         }
+		for (int i = 0; i < len; i++) {
+			// add non-zero element to result array
+			if (nums[i] != 0) {
+				result[index++] = nums[i];
+			}
+		}
+
+		// fill the rest positions with zeros
+		for (; index < len; index++) {
+			result[index] = 0;
+		}
+		return result;
+	}
+
+	public void moveZeroesBigO1(int[] nums) {
+		int len = nums.length;
+		int index = 0;
 
 		// with space complexity O(1)
 		for (int i = 0; i < len; i++) {
@@ -45,9 +54,6 @@ public class MoveZerostoLast {
 				nums[index++] = nums[i];
 			}
 		}
-//		for (; index < len; index++) {
-//			nums[index] = 0;
-//		}
 
 		// fill the last indices with the zeros
 		while (index < len) {
