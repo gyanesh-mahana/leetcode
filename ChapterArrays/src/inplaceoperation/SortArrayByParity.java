@@ -28,8 +28,8 @@ public class SortArrayByParity {
 		int evenIndex = 0;
 		int oddIndex = len - 1;
 
-		//extra space
-		//TBD: Space Complexity O(1) using bitwise & operator
+		// extra space
+		// TBD: Space Complexity O(1) using bitwise & operator
 		int[] result = new int[len];
 
 		for (int i = 0; i < len; i++) {
@@ -41,8 +41,8 @@ public class SortArrayByParity {
 				result[oddIndex--] = A[i];
 			}
 		}
-		
-		//alternate logic using while
+
+		// alternate logic using while
 //		while(evenIndex<=oddIndex){
 //            if(A[i]%2==0){
 //                result[evenIndex++]=A[i];
