@@ -2,7 +2,7 @@
  * Singly Linked List Node Class
  */
 
-package SinglyLinkedList;
+package singlyLinkedList;
 
 public class Node {
 

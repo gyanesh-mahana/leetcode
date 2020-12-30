@@ -2,7 +2,7 @@
  * My Linked List Class
  */
 
-package SinglyLinkedList;
+package singlyLinkedList;
 
 public class MyLinkedList {
 	private Node head;
