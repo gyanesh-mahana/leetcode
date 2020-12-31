@@ -1,5 +1,7 @@
 /*
- * Singly Linked List Node Class
+ * Problem: Implementation of Singly Linked List Node Class
+ * 
+ * Link: https://leetcode.com/explore/learn/card/linked-list/209/singly-linked-list/1290/
  */
 
 package singlyLinkedList;
