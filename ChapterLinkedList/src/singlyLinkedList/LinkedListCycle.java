@@ -50,31 +50,25 @@ public class LinkedListCycle extends MyLinkedList {
 	 */
 	public boolean hasCycle(Node head) {
 
-		int slowCounter;
-		int fastCounter;
 		Node slowPointer, fastPointer; // implementation of double pointer
 		slowPointer = fastPointer = head;
 
 		if (slowPointer == null) { // if no node in linked list
 			return false;
 		}
-
-		slowCounter = fastCounter = 0;
+		
 		while (slowPointer != null) { // run a loop for cycle list
 
 			if (fastPointer.next == null || fastPointer.next.next == null) { // if no cycle
 				return false;
 			}
-
 			fastPointer = fastPointer.next.next; // fast pointer moves 2 nodes at a time
-			fastCounter++;
+			
 			if (slowPointer.val == fastPointer.val) { // point where slow and fast pointer coincide confirming a cycle
-				System.out.println(slowCounter + "," + fastCounter);
 				return true;
 			}
-
 			slowPointer = slowPointer.next; // slow pointer moves one node at a time
-			slowCounter++;
+			
 			if (slowPointer == null) { // if no cycles
 				return false;
 			}
