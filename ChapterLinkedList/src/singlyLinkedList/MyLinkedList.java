@@ -10,8 +10,8 @@ package singlyLinkedList;
 public class MyLinkedList {
 
 	// Head and Tail of the Singly Linked List
-	private Node head;
-	private Node tail;
+	Node head;
+	Node tail;
 
 	// Constructor
 	public MyLinkedList() {
@@ -20,7 +20,11 @@ public class MyLinkedList {
 	}
 
 	/*
-	 * method: get(index) input: index output: value at index
+	 * method: get(index)
+	 * 
+	 * input: index
+	 * 
+	 * output: value at index
 	 */
 	public int get(int index) {
 
@@ -46,8 +50,11 @@ public class MyLinkedList {
 	}
 
 	/*
-	 * method: addAtHead(item) input: item value output: add the item at index 0,
-	 * return nothing
+	 * method: addAtHead(item)
+	 * 
+	 * input: item value
+	 * 
+	 * output: add the item at index 0, return nothing
 	 */
 	public void addAtHead(int item) {
 
@@ -61,8 +68,11 @@ public class MyLinkedList {
 	}
 
 	/*
-	 * method: addAtTail(item) input: item value output: add the item at last index,
-	 * return nothing
+	 * method: addAtTail(item)
+	 * 
+	 * input: item value
+	 * 
+	 * output: add the item at last index, return nothing
 	 */
 	public void addAtTail(int item) {
 
@@ -78,8 +88,11 @@ public class MyLinkedList {
 	}
 
 	/*
-	 * method: addAtIndex(index, item) input: index and item value output: add the
-	 * item at given index, return nothing
+	 * method: addAtIndex(index, item)
+	 * 
+	 * input: index and item value
+	 * 
+	 * output: add the item at given index, return nothing
 	 */
 	public void addAtIndex(int index, int item) {
 
@@ -112,8 +125,11 @@ public class MyLinkedList {
 	}
 
 	/*
-	 * method: deleteAtIndex(index) input: index output: delete the item at given
-	 * index, return nothing
+	 * method: deleteAtIndex(index)
+	 * 
+	 * input: index
+	 * 
+	 * output: delete the item at given index, return nothing
 	 */
 	public void deleteAtIndex(int index) {
 
