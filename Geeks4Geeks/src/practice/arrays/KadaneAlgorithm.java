@@ -43,7 +43,7 @@ public class KadaneAlgorithm {
 	}
 
 	/*
-	 * Kadane’s Algorithm:
+	 * Kadane's Algorithm:
 	 * 
 	 * Initialize: max_so_far = 0 max_ending_here = 0
 	 * 
